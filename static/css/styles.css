@@ -455,6 +455,99 @@ span {
     padding-top: .5rem;
 }
 
+.bagpipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.bagpipe .bagpipe-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.bagpipe-row .bagpipe-column {
+    flex: 1 1 40rem;
+}
+
+.bagpipe-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.bagpipe-column .bagpipe-box {
+    position: relative;
+    border-left: .2rem solid var(--main-color);
+}
+
+.bagpipe-box .bagpipe-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.bagpipe-box .bagpipe-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.bagpipe-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.bagpipe-content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.bagpipe-content .content:hover::before {
+    width: 100%;
+}
+
+.bagpipe-content .content .year {
+    font-size: 1.5rem;
+    /* color: var(--main-color); */
+    color:rgb(65, 203, 203);
+    padding-bottom: .5rem;
+}
+
+.bagpipe-content .content .year i {
+    padding-right: .5rem;
+}
+
+.bagpipe-content .content h3 {
+    font-size: 2rem;
+}
+
+.bagpipe-content .content p {
+    font-size: 1.6rem;
+    padding-top: .5rem;
+}
+
+
 .skills {
     min-height: auto;
     padding-bottom: 7rem;
